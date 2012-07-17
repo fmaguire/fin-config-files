@@ -97,4 +97,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-alias rm='cp  ~/backup; rm '
+
+alias rm='sh ~/bin/rm_replacement.sh'
+export GIT='git@github.com:fmaguire'
