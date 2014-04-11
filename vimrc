@@ -31,6 +31,7 @@ set cmdheight=2
 set laststatus=2
 set number
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%] "useful statusline 
+set background=dark
 colorscheme darkblue "Colorscheme 
 
 "<BUFFERS>

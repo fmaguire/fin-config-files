@@ -1,20 +1,16 @@
 #!/usr/bin/zsh
 
-mv ~/.vimrc ~/.vimrc_backup
-mv ~/.i3status.conf ~/.i3status.conf_backup
-mv ~/.i3 ~/.i3_backup
-mv ~/.zshrc ~/.zshrc_backup
-mv ~/.zsh ~/.zsh_backup
-mv ~/.Xresources ~/.Xresources_backup
-mv ~/.irssi ~/.irssi_backup
+mkdir -p ~/.dotfile_backups
 
-ln -s $PWD/vimrc ~/.vimrc
-ln -s $PWD/i3status.conf ~/.i3status.conf
-ln -s $PWD/i3 ~/.i3
-ln -s $PWD/zshrc ~/.zshrc
-ln -s $PWD/zsh ~/.zsh
-ln -s $PWD/Xresources ~/.Xresources
-ln -s $PWD/irssi ~/.irssi
+dot_files=(Xresources xinitrc i3status.conf i3 zshrc zsh vimrc vim irssi)
+
+for i in "${dot_files[@]}"
+do
+    echo "Backing up existing $i to ~/.dotfile_backups"
+    mv ~/.$i ~/.dotfile_backups/$i
+	echo "Symlinking git repo $i to ~/"
+	ln -s $PWD/$i ~/.$i
+done
 
 xrdb ~/.Xresources
 i3 restart
