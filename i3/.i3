@@ -1,1 +1,1 @@
-/home/fin/Documents/Scripts/fin-config-files/i3
+/home/fin/fin-config-files/i3

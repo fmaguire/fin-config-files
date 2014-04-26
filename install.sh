@@ -2,7 +2,7 @@
 
 mkdir -p ~/.dotfile_backups
 
-dot_files=(Xresources xinitrc i3status.conf i3 zshrc zsh vimrc vim irssi)
+dot_files=(Xresources xinitrc i3status.conf i3 zshenv zlogin zlogout zshrc zsh vimrc vim irssi)
 
 for i in "${dot_files[@]}"
 do
@@ -12,6 +12,7 @@ do
 	ln -s $PWD/$i ~/.$i
 done
 
+mkdir -p ~/.cache/zsh
 xrdb ~/.Xresources
 i3 restart
 source ~/.zshrc

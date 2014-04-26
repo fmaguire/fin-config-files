@@ -1,1 +1,1 @@
-/home/fin/Documents/Scripts/fin-config-files/zsh
+/home/fin/fin-config-files/zsh
