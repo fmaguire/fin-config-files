@@ -2,6 +2,7 @@
 ZSH=$HOME/.zsh
 
 #load config files
+source ~/.zshenv
 
 for config_file ($ZSH/lib/*.zsh); do
     source $config_file
@@ -46,4 +47,3 @@ setopt pushdminus
 bindkey "^R" history-incremental-search-backward
 alias ...='cd ../..'
 alias _='sudo'
-

@@ -3,7 +3,6 @@ URxvt*depth: 32
 URxvt.intensityStyles: false
 
 ! Common
-
 #define S_yellow #b58900
 #define S_orange #cb4b16
 #define S_red #dc322f
@@ -13,9 +12,7 @@ URxvt.intensityStyles: false
 #define S_cyan #2aa198
 #define S_green #859900
 
-
 ! Dark
-
 #define S_base03 #002b36
 #define S_base02 #073642
 #define S_base01 #586e75
@@ -24,24 +21,6 @@ URxvt.intensityStyles: false
 #define S_base1 #93a1a1
 #define S_base2 #eee8d5
 #define S_base3 #fdf6e3
-
-
-! Light
-
-! #define S_base03 #fdf6e3
-! #define S_base02 #eee8d5
-! #define S_base01 #93a1a1
-! #define S_base00 #839496
-! #define S_base0 #657b83
-! #define S_base1 #586e75
-! #define S_base2 #073642
-! #define S_base3 #002b36
-
-
-! To only apply colors to your terminal, for example, prefix
-! the color assignment statement with its name. Example:
-!
-! URxvt*background: S_base03
 
 URxvt*background: S_base03
 URxvt*foreground: S_base0
@@ -67,89 +46,32 @@ URxvt*color13: S_violet
 URxvt*color14: S_base1
 URxvt*color15: S_base3
 
-
-! Use the specified colour as the windows background colour [default White]; option -bg.
-! Use the specified colour as the windows foreground colour [default Black]; option -fg.
-! Use the specified colour for the colour value n, where 0-7 corresponds to low-intensity (normal)
-! URxvt*colorn: colour
-
-! Use the specified colour to display bold or italic characters when the foreground colour is the
-! URxvt*colorIT: colour
-
-! Use the specified colour to display underlined characters when the foreground colour is the
-! URxvt*colorUL: colour
-
-! If set, use the specified colour as the colour for the underline itself. If unset, use the
-! URxvt*underlineColor: colour
-
-! If set, use the specified colour as the background for highlighted characters. If unset, use
-! URxvt*highlightColor: colour
-
-! If set and highlightColor is set, use the specified colour as the foreground for highlighted
-! URxvt*highlightTextColor: colour
-
-! Use the specified colour for the cursor. The default is to use the foreground colour; option
-! URxvt*cursorColor: colour
-
-! Use the specified colour for the colour of the cursor text. For this to take effect, cursorColor
-! URxvt*cursorColor2: colour
-
-! True: specify that jump scrolling should be used. When receiving lots of lines, urxvt will only
-!j! URxvt*jumpScroll: boolean
-! True: (the default) specify that skip scrolling should be used. When receiving lots of lines,
-!! URxvt*skipScroll: boolean
-
-! Fade the text by the given percentage when focus is lost; option -fade.
-URxvt*fading: 20
-
-! Set the application icon pixmap; option -icon.
-! URxvt*iconFile: file
-
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in
-URxvt*font: xft:Dejavu Sans Mono-9
+URxvt*font: xft:DejaVu Sans Mono for Powerline-9
+URxvt*fontsize: 9
 URxvt.letterSpace: -1
 Xft.dpi: 96
 Xft.antialias: 1
 Xft.hinting: 1
 Xft.hintstyle: hintfull
 
-! When font styles are not enabled, or this option is enabled (True, option -is, the default),
-! URxvt*intensityStyles: boolean
-
-! Set window title string, the default title is the command-line specified after the -e option, if
-! URxvt*title: string
-
-! True: start as a login shell by prepending a - to argv[0] of the shell; option -ls. False:
-URxvt*loginShell: True
+URxvt*loginShell: False
 
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
 URxvt*scrollBar: False
 
 ! True: scroll to bottom when tty receives output; option -si.  False: do not scroll to bottom
-! URxvt*scrollTtyOutput: boolean
+URxvt*scrollTtyOutput: False
 
 ! True: scroll with scrollback buffer when tty receives new lines (i.e.  try to show the same
 URxvt*scrollWithBuffer: True
 
 ! True: scroll to bottom when a non-special key is pressed. Special keys are those which are
-! URxvt*scrollTtyKeypress: boolean
+URxvt*scrollTtyKeypress: boolean
 
-! Save number lines in the scrollback buffer [default 64]. This resource is limited on most
 URxvt*saveLines: 999999
-
-! The string to send when the backspace key is pressed. If set to DEC or unset it will send Delete
-! URxvt*backspacekey: string
-
-! The locale to use for opening the IM. You can use an "LC_CTYPE" of e.g.  "de_DE.UTF-8" for
 URxvt*imLocale: en_GB.UTF-8
-
 URxvt*perl-ext-common: default, clipboard, url-select, keyboard-select
-
-! Comma-separated list(s) of perl extension scripts (default: "default") to use in this terminal
 URxvt*perl-ext: default, clipboard, url-select, keyboard-select
-
 URxvt*url-select.launcher: firefox
 URxvt*url-select.underline: true
-
-! Specifies the program to be started with a URL argument. Used by the "selection-popup" and
-URxvt*url-launcher: firefox

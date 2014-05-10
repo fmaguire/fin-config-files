@@ -32,7 +32,7 @@ set laststatus=2
 set number
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%] "useful statusline 
 set background=dark
-colorscheme darkblue "Colorscheme 
+colorscheme blackboard "Colorscheme 
 
 "<BUFFERS>
 autocmd BufReadPost *                                        "Return to last edit position when opening files 
@@ -53,3 +53,8 @@ func! DeleteTrailingWS()                                     "removes trailings 
       autocmd BufWrite *.py :call DeleteTrailingWS()
       autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+
+
+if has('gui running')
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+endif
