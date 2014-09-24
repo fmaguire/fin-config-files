@@ -41,10 +41,13 @@ autocmd BufReadPost *                                        "Return to last edi
      \ endif                                               
 set viminfo^=%                                               "Remember info about open buffers on close 
 
+
 "<CUSTOM>
 set backspace=eol,start,indent                               "fix backspace 
 set whichwrap+=<,>,h,l                                       "fix backspacei 
-inoremap jj <Esc>                                            "remap jj as escape  
+inoremap jj <Esc>
+
+""remap jj as escape  
 func! DeleteTrailingWS()                                     "removes trailings escape whitespace in python or coffee scripts 
       exe "normal mz"
         %s/\s\+$//ge
@@ -53,8 +56,6 @@ func! DeleteTrailingWS()                                     "removes trailings 
       autocmd BufWrite *.py :call DeleteTrailingWS()
       autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+autocmd FileType python compiler pylint
 
-
-if has('gui running')
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
-endif
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
