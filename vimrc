@@ -44,7 +44,9 @@ set viminfo^=%                                               "Remember info abou
 "<CUSTOM>
 set backspace=eol,start,indent                               "fix backspace 
 set whichwrap+=<,>,h,l                                       "fix backspacei 
-inoremap jj <Esc>                                            "remap jj as escape  
+inoremap jj <Esc>
+
+""remap jj as escape  
 func! DeleteTrailingWS()                                     "removes trailings escape whitespace in python or coffee scripts 
       exe "normal mz"
         %s/\s\+$//ge
@@ -53,3 +55,6 @@ func! DeleteTrailingWS()                                     "removes trailings 
       autocmd BufWrite *.py :call DeleteTrailingWS()
       autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
+autocmd FileType python compiler pylint
+
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
