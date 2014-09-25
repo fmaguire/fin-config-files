@@ -13,6 +13,7 @@ done
 eval PR_NO_COLOR="%{$terminfo[sgr0]%}"
 eval PR_BOLD="%{$terminfo[bold]%}"
 
+
 # Check the UID
 
 if [[ $UID -eq 0 ]]; then # root
@@ -20,6 +21,7 @@ if [[ $UID -eq 0 ]]; then # root
   local PR_PROMPT='%{$PR_RED$PR_BOLD%}➤%{$PR_NO_COLOR%} '
 else # normal user
   eval PR_USER='%{$PR_GREEN$PR_BOLD%}%n%{$PR_NO_COLOR%}'
+#  eval PR_USER='%{$PR_GREEN%}%n%{$PR_NO_COLOR%}'
   local PR_PROMPT='%{$PR_NO_COLOR%}➤ '
 fi
 
@@ -45,7 +47,6 @@ PROMPT="
 %{$PR_BLUE%}╭─<${user_host}%{$PR_BLUE%}>-<${current_dir}%{$PR_BLUE%}>-<${p_time}%{$PR_BLUE%}>
 %{$PR_BLUE%}╰─$PR_PROMPT"
 RPS1="${return_code}"
-
 
 
 REPORTTIME=10

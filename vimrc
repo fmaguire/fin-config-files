@@ -27,12 +27,13 @@ syntax enable "syntax hilighting
 set showcmd
 
 "<APPEARANCE>
+set colorcolumn=80
 set cmdheight=2
 set laststatus=2
 set number
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%] "useful statusline 
 set background=dark
-colorscheme darkblue "Colorscheme 
+colorscheme blackboard "Colorscheme 
 
 "<BUFFERS>
 autocmd BufReadPost *                                        "Return to last edit position when opening files 
@@ -40,7 +41,6 @@ autocmd BufReadPost *                                        "Return to last edi
      \   exe "normal! g`\"" |                               
      \ endif                                               
 set viminfo^=%                                               "Remember info about open buffers on close 
-
 "<CUSTOM>
 set backspace=eol,start,indent                               "fix backspace 
 set whichwrap+=<,>,h,l                                       "fix backspacei 
