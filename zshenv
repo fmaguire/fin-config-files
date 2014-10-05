@@ -10,6 +10,7 @@ export PATH=${JAVA_HOME}/bin:usr/local/bin:/opt/anaconda/bin:/usr/bin:/bin:/usr/
 bindkey "^R" history-incremental-search-backward
 alias ...='cd ../..'
 alias _='sudo'
+alias mtlb='matlab -nodisplay'
 alias g='git'
 alias gs='git status -s'
 alias gds='git diff --stat'
@@ -26,4 +27,3 @@ alias m='ssmtp finlaymaguire@gmail.com'
 # options
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
-
