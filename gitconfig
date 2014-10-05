@@ -1,0 +1,11 @@
+[user]
+	email = finlaymaguire@gmail.com
+    name = Finlay Maguire
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    up = rebase
+    ci = commit
+[core]
+    editor = vim
