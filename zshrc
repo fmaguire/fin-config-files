@@ -15,9 +15,9 @@ for plugin ($plugins); do
     fpath=($ZSH/plugins/$plugin $ZSH/functions $ZSH/completions $fpath)
 done
 
-#for config_file ($ZSH/lib/*.zsh); do
-#    source $config_file
-#done
+for config_file ($ZSH/lib/*.zsh); do
+    source $config_file
+done
 
 for plugin ($plugins); do
     source $ZSH/plugins/$plugin.plugin.zsh
