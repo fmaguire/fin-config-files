@@ -1,5 +1,8 @@
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 URxvt*depth: 32
+ Fade the text by the given percentage when focus is lost; option -fade.
+URxvt*fading: 15
+======
 URxvt.intensityStyles: false
 
 ! Common
@@ -45,6 +48,7 @@ URxvt*color12: S_base0
 URxvt*color13: S_violet
 URxvt*color14: S_base1
 URxvt*color15: S_base3
+>>>>>>> 19b0e28b9ab99e5537d1b811d4edcf19320aad84
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in
 URxvt*font: xft:DejaVu\ Sans\ Mono\ for\ Powerline-9
@@ -70,8 +74,3 @@ URxvt*scrollWithBuffer: True
 URxvt*scrollTtyKeypress: boolean
 
 URxvt*saveLines: 999999
-URxvt*imLocale: en_GB.UTF-8
-URxvt*perl-ext-common: default, clipboard, url-select, keyboard-select
-URxvt*perl-ext: default, clipboard, url-select, keyboard-select
-URxvt*url-select.launcher: firefox
-URxvt*url-select.underline: true

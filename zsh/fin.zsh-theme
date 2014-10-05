@@ -25,6 +25,7 @@ if [[ $UID -eq 0 ]]; then # root
   local PR_PROMPT='%{$PR_RED$PR_BOLD%}➤%{$PR_NO_COLOR%} '
 else # normal user
   eval PR_USER='%{$PR_GREEN$PR_BOLD%}%n%{$PR_NO_COLOR%}'
+#  eval PR_USER='%{$PR_GREEN%}%n%{$PR_NO_COLOR%}'
   local PR_PROMPT='%{$PR_NO_COLOR%}➤ '
 fi
 

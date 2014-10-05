@@ -27,6 +27,7 @@ syntax enable "syntax hilighting
 set showcmd
 
 "<APPEARANCE>
+set colorcolumn=80
 set cmdheight=2
 set laststatus=2
 set number
@@ -40,8 +41,6 @@ autocmd BufReadPost *                                        "Return to last edi
      \   exe "normal! g`\"" |                               
      \ endif                                               
 set viminfo^=%                                               "Remember info about open buffers on close 
-
-
 "<CUSTOM>
 set backspace=eol,start,indent                               "fix backspace 
 set whichwrap+=<,>,h,l                                       "fix backspacei 

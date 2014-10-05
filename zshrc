@@ -1,5 +1,9 @@
 # Path to your zsh config.
-ZSH=$HOME/.zsh
+ZSH=${HOME}/.zsh
+
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
 
 #load config files
 source ~/.zshenv
@@ -43,4 +47,9 @@ setopt pushdignoredups
 ## This reverts the +/- operators.
 setopt pushdminus
 
+function lt() { ls -ltrha "$@" | tail; } 
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+function fname() { find . -iname "*$@*"; }
+function mcd() { mkdir $1 && cd $1; }
 
+stty icrnl

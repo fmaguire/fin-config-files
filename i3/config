@@ -41,7 +41,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec konsole
-#i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -105,7 +104,6 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 
-#Workspace names
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
