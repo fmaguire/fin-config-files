@@ -41,11 +41,23 @@ local p_time="%{$PR_BOLD%}%D|%*%{$PR_NO_COLOR%}"
 
 
 
+
+GIT_BRANCH_COLOR="%{$PR_BLUE$PR_BOLD%}"
+GIT_CLEAN_COLOR="%{$PR_GREEN$PR_BOLD%}"
+GIT_DIRTY_COLOR="%{$PR_RED$PR_BOLD%}"
+GIT_UNTRACKED_COLOR="%{PR_YELLOW$PR_BOLD%}"
+
+# These Git variables are used by the oh-my-zsh git_prompt_info helper:
+ZSH_THEME_GIT_PROMPT_PREFIX=": $GIT_BRANCH_COLOR"
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+#ZSH_THEME_GIT_PROMPT_UNTRACKED=" ${GIT_UNTRACKED_COLOR}?"
+ZSH_THEME_GIT_PROMPT_CLEAN=" $GIT_CLEAN_COLOR✓"
+ZSH_THEME_GIT_PROMPT_DIRTY=" $GIT_DIRTY_COLOR✗"
+
 PROMPT="
-%{$PR_BLUE%}╭─<${user_host}%{$PR_BLUE%}>-<${current_dir}%{$PR_BLUE%}>-<${p_time}%{$PR_BLUE%}>
+%{$PR_BLUE%}╭─<${user_host}%{$PR_BLUE%}>-<${current_dir}%{$PR_BLUE%}$(git_prompt_info)%{$PR_BLUE%}>-<${p_time}%{$PR_BLUE%}>
 %{$PR_BLUE%}╰─$PR_PROMPT"
 RPS1="${return_code}"
-
 
 
 REPORTTIME=10

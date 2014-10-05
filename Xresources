@@ -47,8 +47,8 @@ URxvt*color14: S_base1
 URxvt*color15: S_base3
 
 ! Select the fonts to be used. This is a comma separated list of font names that are checked in
-URxvt*font: xft:DejaVu Sans Mono for Powerline-9
-URxvt*fontsize: 9
+URxvt*font: xft:DejaVu\ Sans\ Mono\ for\ Powerline-9
+!URxvt*fontsize: 9
 URxvt.letterSpace: -1
 Xft.dpi: 96
 Xft.antialias: 1

@@ -56,6 +56,4 @@ func! DeleteTrailingWS()                                     "removes trailings 
       autocmd BufWrite *.py :call DeleteTrailingWS()
       autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-autocmd FileType python compiler pylint
-
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
