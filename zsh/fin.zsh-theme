@@ -1,5 +1,5 @@
-# ZSH Theme - Preview: http://dl.dropbox.com/u/4109351/pics/gnzh-zsh-theme.png
-# Based on bira theme
+# ZSH Theme 
+# Based on bira theme with personal modifications
 
 # load some modules
 autoload -U colors zsh/terminfo # Used in the colour alias below
@@ -13,8 +13,13 @@ done
 eval PR_NO_COLOR="%{$terminfo[sgr0]%}"
 eval PR_BOLD="%{$terminfo[bold]%}"
 
-# Check the UID
+# Git colours
+GIT_BRANCH_COLOR="%{$PR_BLUE$PR_BOLD%}"
+GIT_CLEAN_COLOR="%{$PR_GREEN$PR_BOLD%}"
+GIT_DIRTY_COLOR="%{$PR_RED$PR_BOLD%}"
+GIT_UNTRACKED_COLOR="%{PR_YELLOW$PR_BOLD%}"
 
+# Check the UID
 if [[ $UID -eq 0 ]]; then # root
   eval PR_USER='%{$PR_RED$PR_BOLD%}%n%{$PR_NO_COLOR%}'
   local PR_PROMPT='%{$PR_RED$PR_BOLD%}➤%{$PR_NO_COLOR%} '
@@ -30,32 +35,24 @@ else
 fi
 
 local return_code="%(?..%{$PR_RED%}%? ↵%{$PR_NO_COLOR%})"
-
 local user_host='${PR_USER}%{$PR_BLUE%}@${PR_HOST}'
 local current_dir='%{$PR_BOLD$PR_BLUE%}${PWD/#$HOME/~}%{$PR_NO_COLOR%}'
 
 # The time
-
-
 local p_time="%{$PR_BOLD%}%D|%*%{$PR_NO_COLOR%}"
 
-
-
-
-GIT_BRANCH_COLOR="%{$PR_BLUE$PR_BOLD%}"
-GIT_CLEAN_COLOR="%{$PR_GREEN$PR_BOLD%}"
-GIT_DIRTY_COLOR="%{$PR_RED$PR_BOLD%}"
-GIT_UNTRACKED_COLOR="%{PR_YELLOW$PR_BOLD%}"
-
-# These Git variables are used by the oh-my-zsh git_prompt_info helper:
+# These Git variables used git_prompt_info func:
 ZSH_THEME_GIT_PROMPT_PREFIX=": $GIT_BRANCH_COLOR"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 #ZSH_THEME_GIT_PROMPT_UNTRACKED=" ${GIT_UNTRACKED_COLOR}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=" $GIT_CLEAN_COLOR✓"
 ZSH_THEME_GIT_PROMPT_DIRTY=" $GIT_DIRTY_COLOR✗"
 
+GIT_INFO='$(git_prompt_info " (%s)")'
+
+#Set prompt
 PROMPT="
-%{$PR_BLUE%}╭─<${user_host}%{$PR_BLUE%}>-<${current_dir}%{$PR_BLUE%}$(git_prompt_info)%{$PR_BLUE%}>-<${p_time}%{$PR_BLUE%}>
+%{$PR_BLUE%}╭─<${user_host}%{$PR_BLUE%}>-<${current_dir}%{$PR_BLUE%}${GIT_INFO}%{$PR_BLUE%}>-<${p_time}%{$PR_BLUE%}>
 %{$PR_BLUE%}╰─$PR_PROMPT"
 RPS1="${return_code}"
 

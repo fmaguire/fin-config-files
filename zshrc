@@ -1,25 +1,26 @@
-# Path to your oh-my-zsh configuration.
+# Path to your zsh config.
 ZSH=$HOME/.zsh
 
 #load config files
 source ~/.zshenv
 
-for config_file ($ZSH/lib/*.zsh); do
-    source $config_file
-done
-
 #load plugins
 plugins=(zsh-syntax-highlighting vi-mode history-substring-search)
+
 for plugin ($plugins); do
     fpath=($ZSH/plugins/$plugin $ZSH/functions $ZSH/completions $fpath)
 done
 
-autoload -U compinit
-compinit -i
+#for config_file ($ZSH/lib/*.zsh); do
+#    source $config_file
+#done
 
 for plugin ($plugins); do
     source $ZSH/plugins/$plugin.plugin.zsh
 done
+
+autoload -U compinit
+compinit -i
 
 source $ZSH/fin.zsh-theme
 
@@ -43,7 +44,3 @@ setopt pushdignoredups
 setopt pushdminus
 
 
-#aliases and bindings
-bindkey "^R" history-incremental-search-backward
-alias ...='cd ../..'
-alias _='sudo'
