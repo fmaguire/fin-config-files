@@ -39,13 +39,14 @@ chpwd() {
 
 DIRSTACKSIZE=20
 
-setopt autopushd pushdsilent pushdtohome
-
 ## Remove duplicate entries
 setopt pushdignoredups
 
 ## This reverts the +/- operators.
 setopt pushdminus
+
+## prevent overwriting by redirect
+setopt NOCLOBBER 
 
 function lt() { ls -ltrha "$@" | tail; } 
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
