@@ -8,6 +8,8 @@ bindkey -M vicmd v edit-command-line
 #load config files
 source ~/.zshenv
 
+cat $ZSH/todo.txt
+
 #load plugins
 plugins=(zsh-syntax-highlighting vi-mode history-substring-search)
 
