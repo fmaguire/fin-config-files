@@ -41,6 +41,8 @@ chpwd() {
 
 DIRSTACKSIZE=20
 
+setopt autopushd pushdsilent pushdtohome
+
 ## Remove duplicate entries
 setopt pushdignoredups
 
