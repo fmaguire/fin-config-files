@@ -8,7 +8,32 @@ export PATH=${JAVA_HOME}/bin:usr/local/bin:/opt/anaconda/bin:/usr/bin:/bin:/usr/
 
 #aliases and bindings
 bindkey "^R" history-incremental-search-backward
-alias ...='cd ../..'
+
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -i"
+
+alias ls="ls -1p --color=auto"
+alias l="ls -lhGgo"
+alias ll="ls -lh"
+alias la="ls -lhGgoA"
+alias lt="ls -lhGgotr"
+alias lS="ls -lhGgoSr"
+alias l.="ls -lhGgod .*"
+alias lhead="ls -lhGgo | head"
+alias ltail="ls -lhGgo | tail"
+alias lmore='ls -lhGgo | more'
+
+alias cuts="cut -d \" \""
+alias cutc="cut -d \",\""
+
+
+alias tarup="tar -zcf"
+alias tardown="tar -zxf"
+
+alias u="cd ..;ls"
+alias refresh="source ~/.zshrc"
+
 alias _='sudo'
 alias mtlb='matlab -nodisplay'
 alias g='git'
