@@ -1,5 +1,6 @@
 export EDITOR=vim
-export PYTHONPATH=/opt/anaconda/bin:/usr/local/src/p4Hg/
+export PYTHONPATH=/opt/anaconda/lib
+export PYTHONHOME=/opt/anaconda
 export TERMINAL=konsole
 export CC=gcc
 export CXX=g++
