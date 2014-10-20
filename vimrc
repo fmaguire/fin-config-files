@@ -26,6 +26,12 @@ set smartcase
 syntax enable "syntax hilighting
 set showcmd
 
+"<PERSISTENT UNDO>
+set undodir=${HOME}/.vim/undo  " where to save undo histories
+set undofile                 " Save undo's after file closes
+set undolevels=10000         " How many undos
+set undoreload=100000        " number of lines to save for undo
+
 "<APPEARANCE>
 set colorcolumn=80
 set cmdheight=2
@@ -33,6 +39,7 @@ set laststatus=2
 set number
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%] "useful statusline 
 set background=dark
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 colorscheme blackboard "Colorscheme 
 
 "<BUFFERS>
@@ -41,6 +48,7 @@ autocmd BufReadPost *                                        "Return to last edi
      \   exe "normal! g`\"" |                               
      \ endif                                               
 set viminfo^=%                                               "Remember info about open buffers on close 
+
 "<CUSTOM>
 set backspace=eol,start,indent                               "fix backspace 
 set whichwrap+=<,>,h,l                                       "fix backspacei 
@@ -55,4 +63,4 @@ func! DeleteTrailingWS()                                     "removes trailings 
       autocmd BufWrite *.py :call DeleteTrailingWS()
       autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+
