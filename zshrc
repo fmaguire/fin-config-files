@@ -36,9 +36,9 @@ if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
   [[ -d $dirstack[1] ]] && cd $dirstack[1]
 fi
 
-#chpwd() {
-#  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
-#}
+chpwd() {
+    print -l $PWD ${(u)dirstack} > $DIRSTACKFILE
+}
 
 DIRSTACKSIZE=20
 
@@ -49,9 +49,6 @@ setopt pushdignoredups
 
 ## This reverts the +/- operators.
 setopt pushdminus
-
-## prevent overwriting by redirect
-setopt NOCLOBBER 
 
 function lt() { ls -ltrha "$@" | tail; } 
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
@@ -79,8 +76,5 @@ function extract () {
        echo "'$1' is not a valid file!"
    fi
 }
-
-
-
 
 stty icrnl
