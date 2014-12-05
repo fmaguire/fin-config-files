@@ -13,6 +13,5 @@
 [core]
     editor = vim
 	autocrlf = input
-	safecrlf = true
 [push]
 	default = simple

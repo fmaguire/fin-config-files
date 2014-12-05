@@ -40,7 +40,20 @@ set number
 set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%] "useful statusline 
 set background=dark
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
-colorscheme blackboard "Colorscheme 
+colorscheme delek "Colorscheme 
+
+"<CTRLP>
+set runtimepath^=~/.vim/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'ctrlp'
+let g:ctrl_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links'}
+
+let g:ctrlp_user_command = 'find %s -type f'
 
 "<BUFFERS>
 autocmd BufReadPost *                                        "Return to last edit position when opening files 

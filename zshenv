@@ -1,10 +1,12 @@
 export EDITOR=vim
 export TERMINAL=konsole
+export TERM=konsole
 export CC=gcc
 export CXX=g++
+export BT2_HOME=/home/fin/bin/bowtie2-2.2.4
 export JAVA_HOME=/opt/java/64_bit/oracle/jre1.7.0_65/
-export PATH=${JAVA_HOME}/bin:usr/local/bin:/opt/anaconda/bin:/usr/bin:/bin:/usr/lib/jvm/java-7-openjdk/jre/bin:/usr/local/MATLAB/R2014a/bin
-export PYTHONHOME=/usr
+export PATH=${JAVA_HOME}bin:usr/local/bin:/usr/bin:/bin:/usr/lib/jvm/java-7-openjdk/jre/bin:/usr/local/MATLAB/R2014a/bin
+#export PYTHONHOME=/usr
 #aliases and bindings
 bindkey "^R" history-incremental-search-backward
 
@@ -22,7 +24,6 @@ alias lmore='ls -lhGgo | more'
 
 alias cuts="cut -d \" \""
 alias cutc="cut -d \",\""
-
 
 alias tarup="tar -zcf"
 alias tardown="tar -zxf"
@@ -45,6 +46,4 @@ alias gaa='git add -a'
 alias di='du -h --max-depth=1 .'
 alias m='ssmtp finlaymaguire@gmail.com'
 
-# options
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='1;32'
+alias grep='grep --color=auto'

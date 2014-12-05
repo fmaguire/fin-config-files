@@ -6,9 +6,9 @@ zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
 #load config files
-source ~/.zshenv
+#ource ~/.zshenv
 
-cat $ZSH/todo.txt
+#cat $ZSH/todo.txt
 
 #load plugins
 plugins=(zsh-syntax-highlighting vi-mode history-substring-search)
