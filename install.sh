@@ -2,7 +2,7 @@
 
 mkdir -p ~/.dotfile_backups
 
-dot_files=(xinitrc i3status.conf i3 zshenv zshrc zsh vimrc vim irssi gitconfig)
+dot_files=(xinitrc i3status.conf i3 zshenv zshrc zsh vimrc vim gitconfig tmux.conf)
 
 for i in "${dot_files[@]}"
 do
