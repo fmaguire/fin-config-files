@@ -17,5 +17,4 @@ done
 
 source ~/.zshrc
 mkdir -p ~/.cache/zsh
-xrdb ~/.Xresources
 i3 restart

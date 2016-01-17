@@ -3,7 +3,10 @@ export TERMINAL=st
 export TERM=st
 export CC=gcc
 export CXX=g++
-export PATH=usr/local/bin:/usr/bin:/bin
+export CUDA_HOME=/opt/cuda
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
+export PATH=/opt/cuda/bin:usr/local/bin:/usr/bin:/bin
 #aliases and bindings
 bindkey "^R" history-incremental-search-backward
 
